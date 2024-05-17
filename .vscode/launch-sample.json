@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python デバッガー: main.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "env": {
+                "TENANT_ID":"9b9df342-6ccb-43f9-b23f-28417a80cdaf",
+                "ISSUER":"saml2-js-local.shmiki.mikicorp.net"
+            }
+        }
+    ]
+}
