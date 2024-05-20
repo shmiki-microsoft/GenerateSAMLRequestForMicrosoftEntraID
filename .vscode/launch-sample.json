@@ -8,8 +8,9 @@
             "program": "${workspaceFolder}/main.py",
             "console": "integratedTerminal",
             "env": {
-                "TENANT_ID":"9b9df342-6ccb-43f9-b23f-28417a80cdaf",
-                "ISSUER":"saml2-js-local.shmiki.mikicorp.net"
+                "TENANT_ID":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                "ISSUER":"issuer",
+                "ACS":"ACS Endpoint"
             }
         }
     ]

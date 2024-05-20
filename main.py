@@ -11,11 +11,11 @@ def build_saml_request(request_id, issuer):
         <AuthnRequest xmlns="urn:oasis:names:tc:SAML:2.0:protocol"
             xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Version="2.0"
             ID="_2257f698dd90d6f2948b32560245188332dcfc02bf" IssueInstant="{issue_instant}"
-            Destination="https://login.microsoftonline.com/9b9df342-6ccb-43f9-b23f-28417a80cdaf/saml2"
-            AssertionConsumerServiceURL="http://localhost:3000/assert"
+            Destination="https://login.microsoftonline.com/{os.getenv('TENANT_ID')}/saml2"
+            AssertionConsumerServiceURL="{os.getenv('ACS')}"
             ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST">
-            <saml:Issuer>saml2-js-local.shmiki.mikicorp.net</saml:Issuer>
-            <NameIDPolicy Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent""/>
+            <saml:Issuer>{os.getenv('ISSUER')}</saml:Issuer>
+            <NameIDPolicy Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"/>
         </AuthnRequest>'''
 
 def deflate(text):
